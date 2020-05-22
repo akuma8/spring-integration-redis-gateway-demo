@@ -17,7 +17,7 @@ public class FlowsFromOtherServices {
 	@Bean
 	public IntegrationFlow getInfosProfileFlow(RedisQueueInboundGateway inboundGateway, SelfService selfService) {
 		return IntegrationFlows.from(inboundGateway)
-				.handle(selfService::handleGetInfosProfile)
+				.handle(selfService, "handleGetInfosProfile") //Do not use method reference here, the framework will use handle(MessageHandler messageHandler) which is a void method implementation
 				.get();
 	}
 }
