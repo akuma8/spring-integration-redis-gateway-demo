@@ -1,6 +1,6 @@
 # Project organisation
 
-Prerequisite: JDK11, mavane, a Redis server running on its default port.
+Prerequisite: JDK11, Maven, a Redis server running on its default port.
 
 The goal of this simple Spring Boot project is to show how `RedisQueueOutboundGateway` and `RedisQueueInboundGateway` are used in a request/reply context.
 
